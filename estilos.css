@@ -2,7 +2,7 @@ body{
 	background-color: #02010a;
 	padding: 0;
 	margin: 0;
-	margin-top: 2px;
+	margin-top: 1px;
 	font-family: 'Dancing Script', cursive;
 }
 .contenido{
@@ -19,6 +19,8 @@ header{
 	border-radius: 10px 10px 0px 0px;
 	float: left;
     width: 100%;
+    animation-duration: 3s;
+	animation-name: slidein;
 }
 header h1{
 	float: left;
@@ -45,6 +47,17 @@ header nav a.active {
     text-decoration: none;
 }
 
+@keyframes slidein {
+	0%{
+		margin-top: 150%;
+	}
+	60%{
+		margin-top: -5%;
+	}
+	100%{
+		margin-left: 0%;
+	}
+}
 
 /**section**/
 section[class^='img']{
@@ -99,16 +112,19 @@ section div {
 		box-shadow: 2px 2px 2px black;
 		border: 1px solid;
 		transform: rotate(00deg);
+		-webkit-transform: rotate(00deg);
 	}
 	50% {
 		box-shadow: 2px 2px 2px #82c3a6;
 		border: 2px solid #82c3a6;
 		transform: rotate(10deg);
+		-webkit-transform: rotate(10deg);
 	}
 	100% {
 		box-shadow: 2px 2px 2px black;
 		border: 1px solid;
 		transform: rotate(00deg);
+		-webkit-transform: rotate(00deg);
 	}
 }
 
@@ -118,16 +134,19 @@ section div {
 		box-shadow: 2px 2px 2px black;
 		border: 1px solid;
 		transform: translate(0px,0px);
+		-webkit-transform: translate(0px,0px);
 	}
 	50% {
 		box-shadow: 2px 2px 2px #82c3a6;
 		border: 2px solid #82c3a6;
 		transform: translate(20px,-5px);
+		-webkit-transform: translate(20px,-5px);
 	}
 	100% {
 		box-shadow: 2px 2px 2px black;
 		border: 1px solid;
 		transform: translate(0px,0px);
+		-webkit-transform: translate(0px,0px);
 	}
 }
 
