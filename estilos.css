@@ -161,7 +161,7 @@ footer .footer_detalle .redes {
     float: left;
     margin-top: 5px;
     margin-right: 10px;
-    margin-bottom: -3px;
+    margin-bottom: -5px;
 }
 
 footer .footer_detalle div.fa {
@@ -231,6 +231,9 @@ footer .footer_detalle div.sp {
 	/*** detalles ***/
 	.pag_detalle{
 		width: 100%;
+	}
+	#retratos{
+	    margin-top: 30px;	
 	}
 }
 
