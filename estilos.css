@@ -1,0 +1,244 @@
+body{
+	background-color: #02010a;
+	padding: 0;
+	margin: 0;
+	margin-top: 2px;
+	font-family: 'Dancing Script', cursive;
+}
+.contenido{
+	width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/**header**/
+header{
+	background-color: #5b7989;
+	color: white;
+	border-radius: 10px 10px 0px 0px;
+	float: left;
+    width: 100%;
+}
+header h1{
+	float: left;
+    width: 50%;
+    font-weight: 100;
+    padding: 0px;
+    font-size: 30px;
+    padding-left: 20px;
+    margin: 15px;
+    text-shadow: 2px 2px 2px #02010a;
+}
+header nav{
+	float: right;
+	padding-right: 50px;
+    font-size: 19px;
+}
+header nav a{
+	float: left;
+	padding: 15px;
+    margin-top: 10px;
+    color: white;
+}
+header nav a.active {
+    text-decoration: none;
+}
+
+
+/**section**/
+section[class^='img']{
+	text-align: center;
+	display: flex;
+    flex-flow: row wrap;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+section img{
+	width: 80%;
+	box-shadow: 2px 2px 2px #02010a;
+	border: 1px solid;
+}
+section a{
+	color: black;
+	text-decoration-color: black;
+	font-size: 19px;
+    letter-spacing: 1px;
+}
+section div {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+}
+.img_principal{
+	background-color: #82c3a6;
+}
+.img_secundaria{
+	background-color: #d5c75f;
+}
+#paisajes:hover{
+	animation-name: imagen_paisajes;
+    animation-duration: 2s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+#retratos:hover{
+	animation-name: imagen_retratos;
+    animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@keyframes imagen_paisajes{
+	0% {
+		box-shadow: 2px 2px 2px black;
+		border: 1px solid;
+		transform: rotate(00deg);
+	}
+	50% {
+		box-shadow: 2px 2px 2px #82c3a6;
+		border: 2px solid #82c3a6;
+		transform: rotate(10deg);
+	}
+	100% {
+		box-shadow: 2px 2px 2px black;
+		border: 1px solid;
+		transform: rotate(00deg);
+	}
+}
+
+
+@keyframes imagen_retratos{
+	0% {
+		box-shadow: 2px 2px 2px black;
+		border: 1px solid;
+		transform: translate(0px,0px);
+	}
+	50% {
+		box-shadow: 2px 2px 2px #82c3a6;
+		border: 2px solid #82c3a6;
+		transform: translate(20px,-5px);
+	}
+	100% {
+		box-shadow: 2px 2px 2px black;
+		border: 1px solid;
+		transform: translate(0px,0px);
+	}
+}
+
+/**section**/
+footer{
+	background-color: #C6d5c5;
+	border-radius: 0px 0px 10px 10px;
+	float: left;
+	width: 100%;
+	padding-bottom: 15px !important;
+    margin-bottom: 2px !important;
+}
+footer div.footer_cab{
+	float: left;
+	width: 25%;
+	font-size: 18px;
+}
+footer div.footer_detalle {
+    padding-left: 40px;
+}
+footer div h3{
+	padding-left: 40px;
+	letter-spacing: 2px;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+footer .footer_detalle .redes {
+    height: 20px;
+    width: 20px;
+    background: url(../images/redes_sociales.jpg);
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: -3px;
+}
+
+footer .footer_detalle div.fa {
+    background-position: 0px 20px;
+}
+footer .footer_detalle div.ti {
+    background-position: 22px 20px;
+}
+footer .footer_detalle div.sp {
+    background-position: 50px 20px;
+}
+
+
+/******* pagina detalles ********/
+.pag_detalle{
+	width: 33%;
+	padding-bottom: 25px;
+}
+#img1{
+	-webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+#img2, #img4, #img6{
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+#img3{
+	-webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+
+/******* medias queris ********/
+@media all and (max-width: 899px){
+	.contenido{
+		width: 100%;
+	}
+	header{
+		float: left;
+		text-align: center;
+	}
+	header h1{
+		width: 100%;
+		float: left;
+    	margin: 10px 0px 0px 0px;
+    	padding-left: 0px;
+	}
+	header nav{
+	    text-align: center;
+	    width: 50%;
+	    float: left;
+    	padding-left: 35%;
+    	padding-right: 0px;
+	}
+	header nav a{
+		padding: 0px 30px 15px 0px;
+	}
+
+	section div{
+		width: 100%;
+	}
+
+	footer div.footer_cab{
+		width: 100%;
+		padding-bottom: 20px;
+	}
+
+	/*** detalles ***/
+	.pag_detalle{
+		width: 100%;
+	}
+}
+
+
+@media all and (max-width: 500px){
+	header nav {
+	    width: 75%;
+	    padding-left: 20%;
+	    padding-right: 0px;
+	}
+}
